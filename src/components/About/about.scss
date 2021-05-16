@@ -1,12 +1,11 @@
 .about-container {
-  min-height: 50vh;
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .about {
-    height: 550px;
+    height: 600px;
     background-image: url("../../images/bubble3.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -19,7 +18,13 @@
 
     p {
       width: 40%;
+      transition: width 1s ease-out;
     }
+  }
+}
+@media screen and (min-width: 1500px) {
+  .about-container .about p {
+    width: 25%;
   }
 }
 

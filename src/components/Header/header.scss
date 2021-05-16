@@ -1,0 +1,41 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+
+  nav {
+    padding: 4em;
+    margin-right: 8vw;
+    transition: margin-right 2s ease;
+
+    a {
+      text-decoration: none;
+      padding: 1em;
+      color: black;
+      transition: font-size;
+    }
+
+    a:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    justify-content: center;
+
+    nav {
+      margin: 0;
+      padding: 3em;
+    }
+  }
+}

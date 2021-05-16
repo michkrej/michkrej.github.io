@@ -1,0 +1,48 @@
+.about-container {
+  min-height: 50vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .about {
+    height: 550px;
+    background-image: url("../../images/bubble3.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container .about {
+    position: absolute;
+    background-size: 110%;
+    p {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container .about {
+    position: absolute;
+    background-size: 200%;
+    p {
+      width: 90%;
+    }
+
+    p:nth-child(2) {
+      margin-bottom: 5em;
+    }
+  }
+}

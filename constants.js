@@ -1,4 +1,4 @@
-export default {
+const data = {
   intro: {
     p1: "Hi,",
     p2: "I'm Michelle",
@@ -31,3 +31,5 @@ export default {
   linkedin: "https://www.linkedin.com/in/michelle-krejci/",
   github: "https://github.com/michkrej",
 }
+
+export default data

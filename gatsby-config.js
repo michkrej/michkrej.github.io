@@ -1,6 +1,30 @@
+const website = {
+  title: "Michelle Krejci",
+  titleTemplate: "%s | Michelle Krejci",
+  description:
+    "A portfolio website for a third year computer science and engineering student based in Sweden.",
+  url: "https://michkrej.github.io",
+  siteLanguage: "en",
+  image: "/icon.png",
+
+  favicon: "src/images/icon.png",
+  author: "Michelle Krejci",
+  themeColor: "#FAF0E8",
+  backgroundColor: "#FFFFFF",
+
+  googleAnalyticsId: "G-KQE2YRXX9S",
+}
+
 module.exports = {
   siteMetadata: {
-    title: "Portfolio",
+    title: website.title,
+    titleTemplate: website.titleTemplate,
+    description: website.description,
+    siteLanguage: website.siteLanguage,
+    url: website.url,
+    image: website.image,
+    author: website.author,
+    banner: website.image,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -8,15 +32,40 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-KQE2YRXX9S",
+        trackingId: website.googleAnalyticsId,
       },
     },
     "gatsby-plugin-react-helmet",
-    /* "gatsby-plugin-sitemap", */
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+        `,
+        resolveSiteUrl: () => website.url,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map((page) => {
+            return { ...page }
+          })
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: website.title,
+        description: website.description,
+        start_url: website.url,
+        background_color: website.backgroundColor,
+        theme_color: website.themeColor,
+        display: "standalone",
+        icon: website.favicon,
       },
     },
     "gatsby-plugin-sharp",

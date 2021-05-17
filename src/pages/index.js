@@ -3,6 +3,7 @@ import * as React from "react"
 import Projects from "../components/Projects/projects"
 import Header from "../components/Header/header"
 import About from "../components/About/about"
+import Seo from "../components/seo"
 
 import bubble from "../images/bubble1.svg"
 import bubble2 from "../images/bubble2.svg"
@@ -16,6 +17,7 @@ import "../styles/index.scss"
 const IndexPage = () => {
   return (
     <main>
+      <Seo />
       <img src={bubble} className='bubble bubble1' alt='color spash' />
       <Header />
       <div id='start' className='intro-container'>

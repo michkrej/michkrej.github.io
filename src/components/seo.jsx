@@ -12,7 +12,6 @@ const SEO = ({ title, description, banner }) => {
     buildTime,
     siteMetadata: {
       defaultTitle,
-      titleTemplate,
       defaultDescription,
       siteUrl,
       siteLanguage,

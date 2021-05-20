@@ -1,0 +1,58 @@
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .bubble {
+    position: absolute;
+    z-index: -1;
+    max-width: 1000px;
+    width: 40vw;
+    transition: width 2s ease;
+  }
+
+  .bubble1 {
+    left: 0;
+    top: 0;
+  }
+
+  .bubble2 {
+    right: 0;
+    top: 50vh;
+  }
+  .bubble3 {
+    bottom: 0;
+  }
+
+  .up-and-down {
+    animation: MoveUpDown 4s ease-in-out infinite;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .bubble {
+      width: 40vw;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    .bubble {
+      width: 90vw;
+    }
+  }
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

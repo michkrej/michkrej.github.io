@@ -13,7 +13,7 @@ const website = {
   backgroundColor: "#FFFFFF",
 
   googleAnalyticsId: "G-KQE2YRXX9S",
-}
+};
 
 module.exports = {
   siteMetadata: {
@@ -30,9 +30,17 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: website.googleAnalyticsId,
+        trackingIds: [
+          website.googleAnalyticsId, // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
       },
     },
     "gatsby-plugin-react-helmet",
@@ -51,8 +59,8 @@ module.exports = {
         resolveSiteUrl: () => website.url,
         resolvePages: ({ allSitePage: { nodes: allPages } }) => {
           return allPages.map((page) => {
-            return { ...page }
-          })
+            return { ...page };
+          });
         },
       },
     },
@@ -79,4 +87,4 @@ module.exports = {
       __key: "images",
     },
   ],
-}
+};

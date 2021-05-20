@@ -1,4 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "editor.wordWrap": "wordWrapColumn"
+  "editor.wordWrap": "wordWrapColumn",
+  "files.autoSave": "onFocusChange"
 }

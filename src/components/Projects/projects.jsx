@@ -10,9 +10,6 @@ import data from "../../../constants"
 const Projects = () => {
   return (
     <div className='project-container' id='projects'>
-      <div className='title'>
-        <h1>Projects</h1>
-      </div>
       <div className='project'>
         <img src={TCV} alt='Website Test Coverage Visualizer' />
         <p>

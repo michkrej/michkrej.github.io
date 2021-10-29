@@ -22,7 +22,13 @@ const Projects = () => {
         </p>
       </div>
       <div className='project'>
-        <img src={SOF} alt='Website Studentorkesterfestivalen' />
+        <a
+          href='https://www.sof.lintek.liu.se/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={SOF} alt='Website Studentorkesterfestivalen' />
+        </a>
         <p>
           {data.projects.SOF.desc}
           <br />

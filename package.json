@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "personal-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfolio",
+  "description": "Michelle Krejcis personal website",
   "author": "Michelle Krejci",
   "keywords": [
     "gatsby"

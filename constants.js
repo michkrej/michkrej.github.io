@@ -1,11 +1,11 @@
 export const indexText = ['Hi,', "I'm Michelle"];
 
 export const about = [
-	`I'm Michelle, a fourth year computer science and engineering student 
-    at Linköpings Universitet in Sweden. The summer of 2020 I discovered that 
+	`I'm Michelle, a fifth year computer science and engineering student 
+    at Linköpings Universitet. The summer of 2020 I discovered that 
     making websites is something I really, really enjoy. Since then I've spent 
-    most of my spare time exploring the world of web development.`,
-	`You can reach me on any of the places listed below, I'm always open to new opportunities.`,
+    a lot of my spare time exploring the world of web development.`,
+	`You can reach me on any of the places listed below, I'm always open to new opportunities. Both freelance and full-time positions.`,
 ];
 
 export const contactInfo = {
@@ -16,9 +16,8 @@ export const contactInfo = {
 
 export const projects = {
 	Bokning: {
-		desc: `At the end of 2021 I got the role 'Head of Introduction Weeks' at LinTek, which basically means that I am to coordinate the introduction weeks for the around 1200 new students studying at the technological faculity. This job includes a lot of making sure that bookings don't interfere with eachother - something that has earlier been checked manually in a excel sheet. I refused. Instead I build a web-based booking system that is currently being used by welcoming commitees on all faculties.`,
-		frameworks:
-			'React and Firebase. Firebase is used to allow future non-technical people in this role to manage the database',
+		desc: `At the end of 2021 I stepped into the role of 'Head of Introduction Weeks' at LinTek.  This meant that I was responsible for coordinating the introduction weeks for the around 1200 new students studying at the technological faculty. A large part of this job was to ensure that all the association's bookings didn't interfere with each other - something that has earlier been checked manually through an excel sheet. As a developer, I simply couldn't have that. Instead, I built a booking system that is now being used by welcoming committees across all faculties.`,
+		frameworks: 'React and Firebase',
 		alt: 'Website Bokningsplanering',
 		href: 'https://bokningsplanering.com/',
 	},

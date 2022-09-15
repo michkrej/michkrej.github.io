@@ -1,45 +1,30 @@
-import React from "react"
+import React from 'react';
 
-import "./projects.scss"
+import './projects.scss';
 
-import SOF from "../../images/projects/SOF.svg"
-import TCV from "../../images/projects/TCV.svg"
+import SOF from '../../images/projects/SOF.svg';
+import TCV from '../../images/projects/TCV.svg';
+import Bokning from '../../images/projects/Bokningsplanering.jpg';
 
-import data from "../../../constants"
+import { projects } from '../../../constants';
+import Project from './project';
+import Divider from '../Divider/divider';
 
 const Projects = () => {
-  return (
-    <div className='project-container' id='projects'>
-      <div className='project'>
-        <img src={TCV} alt='Website Test Coverage Visualizer' />
-        <p>
-          {data.projects.TCV.desc}
-          <br />
-          <br />
-          <span>
-            <b>Developed using:</b> {data.projects.TCV.frameworks}
-          </span>
-        </p>
-      </div>
-      <div className='project'>
-        <a
-          href='https://www.sof.lintek.liu.se/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img src={SOF} alt='Website Studentorkesterfestivalen' />
-        </a>
-        <p>
-          {data.projects.SOF.desc}
-          <br />
-          <br />
-          <span>
-            <b>Developed using:</b> {data.projects.SOF.frameworks}
-          </span>
-        </p>
-      </div>
-    </div>
-  )
-}
+	return (
+		<div id='projects'>
+			<Divider>2022</Divider>
+			<div className='project-container'>
+				<Project img={Bokning} info={projects.Bokning} />
+			</div>
+			<Divider>2021</Divider>
+			<div className='project-container'>
+				<div />
+				<Project img={TCV} info={projects.TCV} />
+				<Project img={SOF} info={projects.SOF} />
+			</div>
+		</div>
+	);
+};
 
-export default Projects
+export default Projects;
